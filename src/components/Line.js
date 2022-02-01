@@ -1,24 +1,30 @@
 import React from 'react';
 
-const Line = ({ startLocX, startLocY, endLocX, endLocY, diagLocX, diagLocY }) => {
+const Line = ({ name, startLocX, startLocY, endLocX, endLocY, diagLocX, diagLocY }) => {
 
     function createLine(){
-        var canvas = document.getElementById("myCanvas");
+        var canvas = document.getElementById(name);
         var context = canvas.getContext("2d");
         canvas.width = window.innerWidth - 20;
-        canvas.height = window.innerHeight;
+        canvas.height = window.innerHeight * 5;
         context.lineWidth = 5;
+        context.strokeStyle = "white";
         context.moveTo(startLocX, startLocY);
         context.lineTo(endLocX, endLocY);
+        context.lineTo(diagLocX, diagLocY);
         context.stroke();
     }
 
-    window.addEventListener('resize', createLine, false);
+    document.addEventListener("DOMContentLoaded", createLine, false);
+    // window.addEventListener('resize', createLine, false);
+
 
     return(
-        
-        <canvas id="myCanvas" width={window.innerWidth - 20} height={window.innerHeight} >
+
+        <canvas id={name} width={window.innerWidth - 20} height={window.innerHeight} >
         Your browser does not support the HTML canvas tag.</canvas>
+
+
 
 
     );
