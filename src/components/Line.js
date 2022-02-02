@@ -6,7 +6,7 @@ const Line = ({ name, startLocX, startLocY, endLocX, endLocY, diagLocX, diagLocY
         var canvas = document.getElementById(name);
         var context = canvas.getContext("2d");
         canvas.width = window.innerWidth - 20;
-        canvas.height = window.innerHeight * 5;
+        canvas.height = window.innerHeight * 3;
         context.lineWidth = window.innerWidth * 0.005;
         context.strokeStyle = "white";
         context.moveTo(startLocX, startLocY);

@@ -38,7 +38,7 @@ function App() {
           <Button mainText={"Appointment Scheduler"} hiddenText={"Customer Creation"} subText={"Java"} />
           <Button mainText={"Inventory Manangement"} hiddenText={"Parts and Products"} subText={"Java"} />
           <Button mainText={"Temperature Prediction"} hiddenText={"Machine Learning"} subText={"Python, HTML, CSS, JS"} />
-          <Button mainText={"My Links"} hiddenText={"GitHub LinkedIn"} subText={""} />
+          <Button mainText={"My Links"} hiddenText={"GitHub LinkedIn"} subText={"GitHub, LinkedIn"} />
         </div>
 
         
@@ -49,11 +49,11 @@ function App() {
         <Line name={"line5"} startLocX={LocXRight(2)} startLocY={startLocY} endLocX={LocXRight(2)} endLocY={endLocY * 2} diagLocX={LocXRight(2) + diag} diagLocY={endLocY * 2 + diag} /> 
 
 
-        <ContentContainer locX={LocXLeft(1) - diag} locY={endLocY * 0.5 + diag} />
-        <ContentContainer locX={LocXLeft(2) - diag} locY={endLocY * 1.6 + diag} />
-        <ContentContainer locX={LocXRight(0) - diag} locY={endLocY * 2.3 + diag} />
-        <ContentContainer locX={LocXRight(1) + diag} locY={endLocY * 1 + diag} />
-        <ContentContainer locX={LocXRight(2) + diag} locY={endLocY * 2 + diag} />
+        <ContentContainer locX={LocXLeft(1) - diag} locY={endLocY * 0.5 + diag} leftAdjust={true} />
+        <ContentContainer locX={LocXLeft(2) - diag} locY={endLocY * 1.6 + diag} leftAdjust={true} />
+        <ContentContainer locX={LocXRight(0) - diag} locY={endLocY * 2.3 + diag} leftAdjust={true} />
+        <ContentContainer locX={LocXRight(1) + diag} locY={endLocY * 1 + diag} leftAdjust={false} />
+        <ContentContainer locX={LocXRight(2) + diag} locY={endLocY * 2 + diag} leftAdjust={false} />
 
 
       </header>
