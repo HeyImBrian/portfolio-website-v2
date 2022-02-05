@@ -15,7 +15,7 @@ function App() {
   const LocXRight = (multiplier) => (w / 2) + ((w / 30) * multiplier );
   const startLocY = 0;
   const endLocY = h;
-  const diag = (w/30) * 3;
+  const diag = ((w/30) * 3);
 
 
 
