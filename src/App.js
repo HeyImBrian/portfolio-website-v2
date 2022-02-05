@@ -1,4 +1,4 @@
-import myName from './components/images/brianName.png';
+import myName from './components/images/myName.png';
 import Line from './components/Line.js'
 import Button from './components/Button.js'
 import ContentContainer from './components/ContentContainer.js'
@@ -28,8 +28,8 @@ function App() {
 
 
       <header className="App-header">
-        {/* <img src={myName} className="myName" alt="Brian St. Germain" /> */}
-        <h1>Brian St. Germain</h1>
+        <img src={myName} className="myName" alt="Brian St. Germain" />
+        {/* <h1>Brian St. Germain</h1> */}
 
 
 
