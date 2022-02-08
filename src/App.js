@@ -2,22 +2,29 @@ import myName from './components/images/myName.png';
 import Line from './components/Line.js'
 import Button from './components/Button.js'
 import ContentContainer from './components/ContentContainer.js'
+import ProjectContent from './ProjectContent.js'
+import imgDesc from './ImgsAndDesc.js'
 
 import './App.css';
 import './StarsBG.css';
 import './ButtonsStyle.css'
 
 function App() {
+
+  const appointmentProgram = new ProjectContent(imgDesc.imagesAppointmentProgram, imgDesc.descsAppointmentProgram, imgDesc.overviewAppointmentProgram, imgDesc.linkAppointmentProgram);
+  const inventoryProgram = new ProjectContent(imgDesc.imagesInventoryProgram, imgDesc.descsInventoryProgram, imgDesc.overviewInventoryProgram, imgDesc.linkInventoryProgram);
+  const mooloolabaWebsite = new ProjectContent(imgDesc.imagesmooloolabaSite, imgDesc.descsMooloolabaSite, imgDesc.overviewMooloolabaSite, imgDesc.linkMooloolabaSite);
+
+
   const w = window.innerWidth;
   const h = window.innerHeight;
+
 
   const LocXLeft = (multiplier) => (w / 2) - ((w / 30) * multiplier );
   const LocXRight = (multiplier) => (w / 2) + ((w / 30) * multiplier );
   const startLocY = 0;
   const endLocY = h;
   const diag = ((w/30) * 3);
-
-
 
 
   return (
