@@ -5,11 +5,18 @@ import ContentContainer from './components/ContentContainer.js'
 import ProjectContent from './ProjectContent.js'
 import imgDesc from './ImgsAndDesc.js'
 
+
+
 import './App.css';
 import './StarsBG.css';
-import './ButtonsStyle.css'
+import './ButtonsStyle.css';
+import './components/lightbox/css/lightbox.css';
+import './components/lightbox/js/lightbox-plus-jquery.js';
+
 
 function App() {
+  
+
 
   const appointmentProgram = new ProjectContent(imgDesc.imagesAppointmentProgram, imgDesc.descsAppointmentProgram, imgDesc.overviewAppointmentProgram, imgDesc.linkAppointmentProgram);
   const inventoryProgram = new ProjectContent(imgDesc.imagesInventoryProgram, imgDesc.descsInventoryProgram, imgDesc.overviewInventoryProgram, imgDesc.linkInventoryProgram);
@@ -32,12 +39,14 @@ function App() {
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
-
+      
+      {/* <link rel="stylesheet" type="text/css" href="./components/lightbox/css/lightbox.css"></link>
+      <script src="./components/lightbox/js/lightbox-plus-jquery.js"></script> */}
 
       <header className="App-header">
         <img src={myName} className="myName" alt="Brian St. Germain" />
-        {/* <h1>Brian St. Germain</h1> */}
 
+        <a href={appointmentProgram.getImgs()[0]} data-lightbox="appGallery" className="lightbox"> <img className="testImg" src={appointmentProgram.getImgs()[0]}></img></a>
 
 
         <div className="buttonContainer">
