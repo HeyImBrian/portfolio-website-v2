@@ -12,6 +12,7 @@ import './StarsBG.css';
 import './ButtonsStyle.css';
 import './components/lightbox/css/lightbox.css';
 import './components/lightbox/js/lightbox-plus-jquery.js';
+import lightboxPlusJquery from './components/lightbox/js/lightbox-plus-jquery.js';
 
 
 function App() {
@@ -34,6 +35,21 @@ function App() {
   const diag = ((w/30) * 3);
 
 
+
+  function generateRange(max){
+    let numList = [];
+    for (let i = 1; i < max; i++){
+      numList.push(i);
+    }
+    return numList;
+  }
+
+  
+  var appointmentProgramSetup = generateRange(appointmentProgram.getImgs().length);
+  var inventoryProgramSetup = generateRange(inventoryProgram.getImgs().length);
+  var mooloolabaWebsiteSetup = generateRange(mooloolabaWebsite.getImgs().length);
+
+
   return (
     <div className="App">
       <div id="stars"></div>
@@ -46,7 +62,19 @@ function App() {
       <header className="App-header">
         <img src={myName} className="myName" alt="Brian St. Germain" />
 
-        <a href={appointmentProgram.getImgs()[0]} data-lightbox="appGallery" className="lightbox"> <img className="testImg" src={appointmentProgram.getImgs()[0]}></img></a>
+
+        {lightboxPlusJquery.option({'resizeDuration': 0, 'imageFadeDuration': 300})}
+
+        {/* Lightbox setups */}
+        <a href={appointmentProgram.getImgs()[0]} data-lightbox="appointmentGallery" className="lightbox" data-title={appointmentProgram.getDesc()[0]}> <img className="testImg" src={appointmentProgram.getImgs()[0]}></img></a>
+        {appointmentProgramSetup.map( (index) => (<a href={appointmentProgram.getImgs()[index]} data-lightbox="appointmentGallery" className="lightbox" key={index} data-title={appointmentProgram.getDesc()[index]}></a>))}
+
+        <a href={inventoryProgram.getImgs()[0]} data-lightbox="inventoryGallery" className="lightbox" data-title={inventoryProgram.getDesc()[0]}> <img className="testImg" src={inventoryProgram.getImgs()[0]}></img></a>
+        {inventoryProgramSetup.map( (index) => (<a href={inventoryProgram.getImgs()[index]} data-lightbox="inventoryGallery" className="lightbox" key={index} data-title={inventoryProgram.getDesc()[index]}></a>))}
+
+        <a href={mooloolabaWebsite.getImgs()[0]} data-lightbox="mooloolabaGallery" className="lightbox" data-title={mooloolabaWebsite.getDesc()[0]}> <img className="testImg" src={mooloolabaWebsite.getImgs()[0]}></img></a>
+        {mooloolabaWebsiteSetup.map( (index) => (<a href={mooloolabaWebsite.getImgs()[index]} data-lightbox="mooloolabaGallery" className="lightbox" key={index} data-title={mooloolabaWebsite.getDesc()[index]}></a>))}
+
 
 
         <div className="buttonContainer">
