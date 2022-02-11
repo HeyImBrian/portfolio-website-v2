@@ -71,11 +71,11 @@ function App() {
         <Line name={"line5"} startLocX={LocXRight(2)} startLocY={startLocY} endLocX={LocXRight(2)} endLocY={endLocY * 2} diagLocX={LocXRight(2) + diag} diagLocY={endLocY * 2 + diag} /> 
 
 
-        <ContentContainer locX={LocXLeft(1) - diag} locY={endLocY * 0.5 + diag} leftAdjust={true} programObj={appointmentProgram} lightboxName={"resumeGallery"} generateRange={generateRange} />
-        <ContentContainer locX={LocXRight(1) + diag} locY={endLocY * 1 + diag} leftAdjust={false} programObj={appointmentProgram} lightboxName={"appointmentGallery"} generateRange={generateRange} />
-        <ContentContainer locX={LocXLeft(2) - diag} locY={endLocY * 1.6 + diag} leftAdjust={true} programObj={inventoryProgram} lightboxName={"inventoryGallery"} generateRange={generateRange} />
-        <ContentContainer locX={LocXRight(2) + diag} locY={endLocY * 2 + diag} leftAdjust={false} programObj={mooloolabaWebsite} lightboxName={"mooloolabaGallery"} generateRange={generateRange} />
-        <ContentContainer locX={LocXRight(0) - diag} locY={endLocY * 2.3 + diag} leftAdjust={true} programObj={mooloolabaWebsite} lightboxName={"mooloolabaGallery"} generateRange={generateRange} />
+        <ContentContainer locX={LocXLeft(1) - diag} locY={endLocY * 0.5 + diag} leftAdjust={true} hasImages={true} programObj={appointmentProgram} lightboxName={"resumeGallery"} generateRange={generateRange} />
+        <ContentContainer locX={LocXRight(1) + diag} locY={endLocY * 1 + diag} leftAdjust={false} hasImages={true} programObj={appointmentProgram} lightboxName={"appointmentGallery"} generateRange={generateRange} />
+        <ContentContainer locX={LocXLeft(2) - diag} locY={endLocY * 1.6 + diag} leftAdjust={true} hasImages={true} programObj={inventoryProgram} lightboxName={"inventoryGallery"} generateRange={generateRange} />
+        <ContentContainer locX={LocXRight(2) + diag} locY={endLocY * 2 + diag} leftAdjust={false} hasImages={true} programObj={mooloolabaWebsite} lightboxName={"mooloolabaGallery"} generateRange={generateRange} />
+        <ContentContainer locX={LocXRight(0) - diag} locY={endLocY * 2.3 + diag} leftAdjust={true} hasImages={false} programObj={""} lightboxName={""} generateRange={generateRange} />
 
 
       </header>
