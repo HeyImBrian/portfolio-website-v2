@@ -79,9 +79,9 @@ body.lb-disable-scrolling {
 .lb-nav {
   position: absolute;
   top: 0;
-  left: -30%;
-  right: -30%;
+  left: 0;
   height: 100%;
+  width: 100%;
   z-index: 10;
 }
 
@@ -164,8 +164,8 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-caption {
-  font-size: 24px;
-  /* font-weight: bold; */
+  font-size: 13px;
+  font-weight: bold;
   line-height: 1em;
 }
 
