@@ -8,7 +8,7 @@ import './App.css';
 import './StarsBG.css';
 import './ButtonsStyle.css';
 import './components/lightbox/css/lightbox.css';
-import './components/lightbox/js/lightbox-plus-jquery.js';
+// import './components/lightbox/js/lightbox-plus-jquery.js';
 import lightboxPlusJquery from './components/lightbox/js/lightbox-plus-jquery.js';
 
 
@@ -56,11 +56,11 @@ function App() {
 
 
         <div className="buttonContainer">
-          <Button mainText={"Resume"} hiddenText={"Resume"} subText={""} />
-          <Button mainText={"Appointment Scheduler"} hiddenText={"Customer Creation"} subText={"Java"} />
-          <Button mainText={"Inventory Manangement"} hiddenText={"Parts and Products"} subText={"Java"} />
-          <Button mainText={"Temperature Prediction"} hiddenText={"Machine Learning"} subText={"Python, HTML, CSS, JS"} />
-          <Button mainText={"My Links"} hiddenText={"GitHub LinkedIn"} subText={"GitHub, LinkedIn"} />
+          <Button linkTo={"resumeGallery"} mainText={"Resume"} hiddenText={"Resume"} subText={""} />
+          <Button linkTo={"appointmentGallery"} mainText={"Appointment Scheduler"} hiddenText={"Customer Creation"} subText={"Java"} />
+          <Button linkTo={"inventoryGallery"} mainText={"Inventory Manangement"} hiddenText={"Parts and Products"} subText={"Java"} />
+          <Button linkTo={"mooloolabaGallery"} mainText={"Temperature Prediction"} hiddenText={"Machine Learning"} subText={"Python, HTML, CSS, JS"} />
+          <Button linkTo={"myLinks"} mainText={"My Links"} hiddenText={"GitHub LinkedIn"} subText={"GitHub, LinkedIn"} />
         </div>
 
   
@@ -71,11 +71,11 @@ function App() {
         <Line name={"line5"} startLocX={LocXRight(2)} startLocY={startLocY} endLocX={LocXRight(2)} endLocY={endLocY * 2} diagLocX={LocXRight(2) + diag} diagLocY={endLocY * 2 + diag} /> 
 
 
-        <ContentContainer locX={LocXLeft(1) - diag} locY={endLocY * 0.5 + diag} leftAdjust={true} programObj={appointmentProgram} lightboxName={"resumeGallery"} generateRange={generateRange} />
-        <ContentContainer locX={LocXRight(1) + diag} locY={endLocY * 1 + diag} leftAdjust={false} programObj={appointmentProgram} lightboxName={"appointmentGallery"} generateRange={generateRange} />
-        <ContentContainer locX={LocXLeft(2) - diag} locY={endLocY * 1.6 + diag} leftAdjust={true} programObj={inventoryProgram} lightboxName={"inventoryGallery"} generateRange={generateRange} />
-        <ContentContainer locX={LocXRight(2) + diag} locY={endLocY * 2 + diag} leftAdjust={false} programObj={mooloolabaWebsite} lightboxName={"mooloolabaGallery"} generateRange={generateRange} />
-        <ContentContainer locX={LocXRight(0) - diag} locY={endLocY * 2.3 + diag} leftAdjust={true} programObj={mooloolabaWebsite} lightboxName={"mooloolabaGallery"} generateRange={generateRange} />
+        <ContentContainer id="resumeGallery" locX={LocXLeft(1) - diag} locY={endLocY * 0.5 + diag} leftAdjust={true} programObj={appointmentProgram} lightboxName={"resumeGallery"} generateRange={generateRange} />
+        <ContentContainer id="appointmentGallery" locX={LocXRight(1) + diag} locY={endLocY * 1 + diag} leftAdjust={false} programObj={appointmentProgram} lightboxName={"appointmentGallery"} generateRange={generateRange} />
+        <ContentContainer id="inventoryGallery" locX={LocXLeft(2) - diag} locY={endLocY * 1.6 + diag} leftAdjust={true} programObj={inventoryProgram} lightboxName={"inventoryGallery"} generateRange={generateRange} />
+        <ContentContainer id="mooloolabaGallery" locX={LocXRight(2) + diag} locY={endLocY * 2 + diag} leftAdjust={false} programObj={mooloolabaWebsite} lightboxName={"mooloolabaGallery"} generateRange={generateRange} />
+        <ContentContainer id="myLinks" locX={LocXRight(0) - diag} locY={endLocY * 2.3 + diag} leftAdjust={true} programObj={mooloolabaWebsite} lightboxName={"myLinks"} generateRange={generateRange} />
 
 
       </header>

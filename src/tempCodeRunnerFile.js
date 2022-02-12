@@ -1,2 +1,1 @@
-
-  const h = window.innerHeight;
+import lightboxPlusJquery from './components/lightbox/js/lightbox-plus-jquery.js';

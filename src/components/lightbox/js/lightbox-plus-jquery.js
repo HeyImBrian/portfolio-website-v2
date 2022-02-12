@@ -1,3 +1,4 @@
+/* eslint no-undef: "off"*/
 /*!
  * jQuery JavaScript Library v3.4.1
  * https://jquery.com/
